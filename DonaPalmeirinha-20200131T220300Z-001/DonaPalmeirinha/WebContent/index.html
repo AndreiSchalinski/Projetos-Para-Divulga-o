@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- 
+1 - Cores Tabela ok
+2 - Cores Botão ok
+3 - Validação Formulário ok
+4 - Obrigatoriedade dos campos do Formulário ok 
+5 - Revisar todos os itens da parte de JavaScript ok
+ -->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Site da Dona Palmeirinha">
+		<meta name="keywords" content="Doces e Salgados">
+		<meta name="autor" content="Andrei Schalinski">
+		<meta name="viewport" content="width=device=width, initial-scale=1.0">
+		<title>Palmeirinha Festas</title>
+		<link href="css/estilo.css" type="text/css" rel="stylesheet">
+		<script src="javaScript/programado.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1 >Palmeirinha Festas</h1>		
+		</header>
+		<nav>
+			<a href="imagens/imagem1.jpg" target="_black"  alt="imagem de quitutes caseiros"><img class="imagens"src="imagens/imagem1.jpg"></a>
+			<a href="imagens/imagem6.jpg" target="_blanck" alt="imagem de quitutes caseiros"><img class="imagens"src="imagens/imagem6.jpg"></a>
+			<a href="imagens/imagem2.jpg" target="_blanck" alt="imagem de quitutes caseiros"><img class="imagens"src="imagens/imagem2.jpg"></a>
+			<a href="imagens/imagem4.jpg" target="_blanck" alt="imagem de quitutes caseiros"><img class="imagens"src="imagens/imagem4.jpg"></a>
+			<a href="imagens/imagem5.jpg" target="_blanck" alt="imagem de quitutes caseiros"><img class="imagens"src="imagens/imagem5.jpg"></a>
+		</nav>
+		<section>
+			<h2>Quitutes Pedidos</h2>
+				<h2>Quem somos</h2>
+				<p>
+					Dono Palmeirinha trabalha há mais de 50 anos no ramos, sempre
+					fazendo a</br> alegria da festa. Seus doces e salgados são reconhecidos
+					pelo sabor, beleza</br> e qualidade. Veja alguns de nossos produtos:
+				</p>
+				<h2>Quitutes</h2>
+				<table class="tabelaProdutos">
+					<thead>
+						<tr>
+							<th>Categoria</th>
+							<th>Nome</th>
+							<th>Valor unitário</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Doces1</td>
+							<td>Bolo de Chocolate</td>
+							<td>R$0.30</td>
+						</tr>
+						<tr>
+							<td>Doces2</td>
+							<td>Bolo de Morango</td>
+							<td>R$0.30</td>
+						</tr>
+						<tr>
+							<td>Doces3</td>
+							<td>Torta Alemã</td>
+							<td>R$0.40</td>
+						</tr>
+						<tr>
+							<td>Salgados1</td>
+							<td>Coxinha</td>
+							<td>R$0.30</td>
+						</tr>
+						<tr>
+							<td>Salgados2</td>
+							<td>Risoles</td>
+							<td>R$0.30</td>
+						</tr>
+						<tr>
+							<td>Mistos</td>
+							<td>Coxinha c/ Risoles</td>
+							<td>R$0.30</td>
+						</tr>
+					</tbody>
+				</table>
+				<h2>Pedidos</h2>
+				<form name="formularioPedido" method="post" action="#" onsubmit="return validarFormulario()">
+					<fieldset class="formularioPedido">
+						<legend>Efetue seu pedido aqui</legend>
+						<label for="text" class="identificadorInput">Nome *</label> <!-- label de legenda com for para atribuir ao atributo(como um id) -->
+						<input type="text" name="textoName" maxlength="25" class="inputTexto"> 
+						<label id="data" for="datePedido">Entrega *</label>
+						<input id="dataEntrega" type="date" name="datePedido">
+						<div id="horas"> <!-- aqui criei uma div para alinhar a palavra de forma isolada no css  -->
+						<label id="hora" for="hora">Hora</label> 
+						</div>
+						<input id="horaEntrega" type="time" name="horaEntrega"> <!-- campo hora -->
+						<label class="identificadorInput" for="quitutes">Quitutes *</label> 
+							<select name="opcoesProduto">
+							<option value="">Escolha</option>
+							<option value="Doces1">Salgados</option>
+							<option value="Doces2">Doces</option>
+							<option value="Doces3">Misto</option>
+						</select>
+						<label  for="quantidade">Quantidade *</label>
+						<input class="inputTexto" type="quantidadePedido" name="quantidadePedidos">
+						<textarea name="txacomentario">Descreva o pedido (ao deixar em branco, o pedido será sortido)</textarea>
+						<label for="text" class="identificadorInput">Endereço</label>
+						<input class="inputTexto" type="text" name="enderecoEntrega">
+						<input id ="coletarProduto" type="checkbox" name="tipoEntrega" value="1" ><div id="frase">Deseja retirar em mãos</div>
+						<label for="telefone" class="identificadorInput">Telefone *</label>
+						<input type="text" name="numeroTelefone" class="inputTexto">
+						<button id="botao1" type="reset">Limpar</button><button id="botao2" type="submit">Pedir</button>
+						</fieldset>
+				</form>
+		</section>
+		<footer>Copyright &copy; Andrei Schalinski 2019</footer>
+	</body>
+</html>

@@ -1,0 +1,141 @@
+body{
+
+    background:linear-gradient(to right, black , rgb(0, 68, 255));
+    
+}
+
+h1{
+    position: relative;
+    color: yellow;
+    font-family: sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    top:6px;
+}
+
+#fundoTitulo{
+    background-color: rgb(73, 11, 131);
+    width: auto ;
+    height: 160px;
+    border: solid 10px yellow;
+}
+
+.botao{
+
+    width: 50px;
+    height: 30px;
+    background-color: white;
+    border: solid 2px;
+    border-radius: 5px;
+    
+}
+.botaoZero{
+    position: relative;
+    top: 6px;
+    left: 1px;
+    width: 174px;  
+    height: 58px;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    border: solid 2px;
+    background-color: white;
+}
+#tela{
+    width: 196px;
+    height: 30px;
+    font-size: 20px;
+    border: solid 2px black;
+    text-align: right;
+}
+.bordaInterior{
+
+    width: 350px;
+
+}
+#bordaDeCima{
+    height: 50px;
+    background-color: yellow;
+    border: solid 3px black;
+    border-radius: 5px;
+    
+}
+#bordaDeBaixo{
+
+    height: 300px;
+    background-color: yellow;
+    border: solid 3px black;
+    border-radius: 5px;
+}
+#bordaExterna{
+    position: relative;
+    top:8px;
+    left: 32%;
+    width:350px ;
+    height: 420px;
+    border: solid 5px rgb(221, 98, 16);
+    background-color: yellow;
+    border-radius: 20px;
+}
+#tela{
+    position: relative;
+    top:5px;  
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    width: 346px; 
+    height: 38px; 
+    background-color: rgb(81, 231, 236);
+    border-radius: 5px;
+}
+#telaSinal{
+
+    position: relative;
+    top:-80px;  
+    text-indent: 6px;
+    float: right;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    width: 30px; 
+    height: 18px; 
+    background-color: black;
+    border: solid 2px rgb(243, 103, 9);
+    border-radius: 4px;
+    color: beige;
+
+}
+#legenda{
+
+    position: relative;
+    top: -34px; 
+    left: 300px;
+    font-family: sans-serif;
+    font-weight: bold;
+    
+}
+.botao{
+    position: relative;
+    top:6px; 
+    left: 1px; 
+    width: 87px;  
+    height: 58px;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    
+    
+}
+#calculadora{
+    position: relative;
+    top: -50px;    
+}
+#autoria{
+    position: relative;
+    top:6px; 
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+
+}

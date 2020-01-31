@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>Calculadora</title>
+                <link href="estilo.css" rel="stylesheet" type="text/css">
+                <script src="sistemaCalculadora.js" type="text/JavaScript"></script>
+            </head>
+        <body>
+            <div id="fundoTitulo"><h1>Calculadora HTML5, CSS3 e JavaScript</h1></div>
+                <fieldset id="bordaExterna">
+                    <footer id="autoria">&#169 Andrei Schalinski </footer>
+                            <div id="legenda"><h3>//////--//////</h3></div>
+                    <div id="calculadora">
+                        <fieldset class="bordaInterior" id="bordaDeCima">
+                                <input type="text" id="tela" maxlength="10"></br>
+                        </fieldset>
+                            <fieldset class="bordaInterior" id="bordaDeBaixo">
+                                    <input type="button" class="botao" value="C" onclick="cancelar(0)" onmousedown="destacarBotaoApertado(0)" onmouseup="tirarCorFundo(0)"><input type="button" class="botao" value="<" onclick="apagarNumero()"onmousedown="destacarBotaoApertado(1)" onmouseup="tirarCorFundo(1)"><input type="button" class="botao" value="%" onclick="calcularPorcentagem()"onmousedown="destacarBotaoApertado(2)" onmouseup="tirarCorFundo(2)"><input type="button" class="botao" value="/" onclick="insertNumero('/')"onmousedown="destacarBotaoApertado(3)" onmouseup="tirarCorFundo(3)"></br>
+                                    <input type="button" class="botao" value="7" onclick="insertNumero(7)" onmousedown="destacarBotaoApertado(4)" onmouseup="tirarCorFundo(4)"><input type="button" class="botao" value="8" onclick="insertNumero(8)"onmousedown="destacarBotaoApertado(5)" onmouseup="tirarCorFundo(5)"><input type="button" class="botao" value="9" onclick="insertNumero(9)"onmousedown="destacarBotaoApertado(6)" onmouseup="tirarCorFundo(6)"><input type="button" class="botao" value="x" onclick="insertNumero('*')"onmousedown="destacarBotaoApertado(7)" onmouseup="tirarCorFundo(7)" ></br>
+                                    <input type="button" class="botao" value="4" onclick="insertNumero(4)" onmousedown="destacarBotaoApertado(8)" onmouseup="tirarCorFundo(8)"><input type="button" class="botao" value="5" onclick="insertNumero(5)" onmousedown="destacarBotaoApertado(9)" onmouseup="tirarCorFundo(9)"><input type="button" class="botao" value="6" onclick="insertNumero(6)" onmousedown="destacarBotaoApertado(10)" onmouseup="tirarCorFundo(10)"><input type="button" class="botao" value="-" onclick="insertNumero('-')"onmousedown="destacarBotaoApertado(11)" onmouseup="tirarCorFundo(11)" ></br>
+                                    <input type="button" class="botao" value="1" onclick="insertNumero(1)" onmousedown="destacarBotaoApertado(12)" onmouseup="tirarCorFundo(12)"><input type="button" class="botao" value="2" onclick="insertNumero(2)" onmousedown="destacarBotaoApertado(13)" onmouseup="tirarCorFundo(13)"><input type="button" class="botao" value="3" onclick="insertNumero(3)" onmousedown="destacarBotaoApertado(14)" onmouseup="tirarCorFundo(14)"><input type="button" class="botao" value="+" onclick="insertNumero('+')" onmousedown="destacarBotaoApertado(15)" onmouseup="tirarCorFundo(15)"></br>
+                                    <input type="button" class="botaoZero" value="0" onclick="insertNumero(0)" onmousedown="destacarBotaoApertadoBotaoZero(0)" onmouseup="tirarCorFundoBotaoZero(0)"><input type="button" class="botao" value="." onclick="insertNumero('.')" onmousedown="destacarBotaoApertado(16)" onmouseup="tirarCorFundo(16)"><input type="button" class="botao" value="=" onclick="exibirResultado()" onmousedown="destacarBotaoApertado(17)" onmouseup="tirarCorFundo(17)">
+                            </fieldset>
+                    </div>
+                </fieldset>
+                <script>
+                function destacarBotaoApertadoBotaoZero(valor){
+                    for (let i = 0; i < document.getElementsByClassName('botaoZero').length; i++) {                        
+                        if (valor === i) {
+                            document.getElementsByClassName('botaoZero')[i].style.background = 'blue';
+                        }                       
+                    }
+                }
+                function tirarCorFundoBotaoZero(valor){
+                    for (let i = 0; i < document.getElementsByClassName('botaoZero').length; i++) {
+                        if (valor === i) {
+                            document.getElementsByClassName('botaoZero')[i].style.background = 'white'
+                        }
+                    }
+                }
+                function destacarBotaoApertado(valor){
+                    for (let i = 0; i < document.getElementsByClassName('botao').length; i++) {                        
+                        if (valor === i) {
+                            document.getElementsByClassName('botao')[i].style.background = 'blue';
+                        }                        
+                    }
+                }
+
+                function tirarCorFundo(valor){
+                    for (let i = 0; i < document.getElementsByClassName('botao').length; i++) {                        
+                        if (valor === i) {
+                            document.getElementsByClassName('botao')[i].style.background = 'white'
+                        }                        
+                    }                
+                }
+
+                </script>
+        </body>
+</html>
